@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 		setContentView(R.layout.activity_main);
 		
 		// the ListView takes the data from the data source (the array)
-		list = (ListView) findViewById(android.R.id.list);
+		list = (ListView) findViewById(R.id.listview);
 		
 		// the array adapter takes the data from the array and changes it into a view
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, days);
@@ -38,7 +38,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 	}
 	
 	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position,
+	public void onItemClick(AdapterView<?> adapterView, View view, int position,
 			long id) {
 		
 		// The textviews in the list
@@ -46,5 +46,38 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 		
 		// Displays a toast that echoes what TextView was clicked i.e. tap "Monday" and a toast that says "Monday" will appear.
 		Toast.makeText(this, temp.getText(), Toast.LENGTH_SHORT).show();
+	}
+	
+	/* Added these other methods for learning purposes. */
+	
+	@Override
+	protected void onStart() {
+		super.onStart();
+	}
+
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
 	}
 }
