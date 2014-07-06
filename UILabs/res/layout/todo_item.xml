@@ -53,7 +53,7 @@
         android:layout_alignTop="@+id/StatusLabel" >
     </TextView>
 
-    <TextView
+   <TextView
         android:id="@+id/DateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
